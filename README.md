@@ -16,7 +16,7 @@ B --> C{Color Pixels}
 C -- KMeans + Distortion --> D[Centroids]
 
 E[Centroids] -- Largest --> F[Predominant pixels]
-F -- Smallest L2 Norm to RGB Values of colors --> G{detection}
+F --  L2 Norm on RGBs --> G{Nearest color}
 
 
 ```
