@@ -1,7 +1,7 @@
 # Color Detection via Euclidean Distance
 
 This is a python script that detects the predominant color of an object in an image. In this specific aplication, we are detecting color of vehicles.
-![color detection] (detection.jpeg)
+![color detection] (detection.png)
 
 
 ## Pipeline
