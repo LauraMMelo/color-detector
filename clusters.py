@@ -3,10 +3,6 @@ import matplotlib.pyplot as plt
 from back import Back
 from mpl_toolkits.mplot3d import Axes3D
 
-im = plt.imread('redcar.jpg')
-remover = Back(10)
-imb = remover.remove_bg(im)
-img = im[~imb]
 
 def _square_distorsion(npixels, compact, y):
         return pow(compact / npixels, -y)
@@ -51,20 +47,3 @@ class Cluster():
         return kmeans.inertia_, kmeans.labels_, kmeans.cluster_centers_
 
 
-#plt.plot(img)
-        
-
-
-cl = Cluster()
-result = cl.clusterize(img)
-print(result)
-
-#plt.imshow(imb)
-
-fig = plt.figure()
-ax = plt.axes(projection='3d')
-ax.scatter(img[:,0], img[:,1], img[:,2], color=[(r[0] / 255., r[1] / 255., r[2] / 255.) for r in img], alpha=0.01)
-i = result[2]
-for j in i:
-    ax.scatter(j[2], j[1], j[0], 'x', marker = 'D')
-plt.show()
