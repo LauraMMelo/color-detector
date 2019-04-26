@@ -6,7 +6,7 @@ Created on Tue Apr 23 11:41:28 2019
 @author: computervision
 """
 
-import numpy as np
+
 import scipy 
 import math
 
