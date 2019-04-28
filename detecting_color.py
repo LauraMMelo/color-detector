@@ -13,7 +13,7 @@ from color_detect import ColorDetector
 import matplotlib.pyplot as plt
 import numpy as np
 
-im = plt.imread('/home/computervision/Documentos/color_dataset/yellow/101.jpg')
+im = plt.imread('./imgs/redcar.jpg')
 remover = Back(10)
 imb = remover.remove_bg(im)
 img = im[~imb]

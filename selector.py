@@ -8,10 +8,6 @@ Created on Fri Apr  5 12:07:23 2019
 
 import numpy as np
 
-import matplotlib.pyplot as plt
-from back import Back
-from clusters import Cluster
-
 class Selector():
     def __init__(self):
         self.ratio_thresh = 0.75
@@ -19,7 +15,7 @@ class Selector():
     def largest(self, k, labels, centers):
         counts = [np.count_nonzero(labels == l) for l in range(k)]
         sort_idx = np.argsort(counts)[::-1]
-        return [centers[sort_idx[0]]]
+        return [centers[sort_idx[0]]], sort_idx[0] #now returns centroid and its position on clusters vector
     
     def ratio(self, k, labels, centers):
         counts = [np.count_nonzero(labels == l) for l in range(k)]
@@ -36,18 +32,3 @@ class Selector():
         return sort_centers[:idx_stop + 1]
 
 
-#im = plt.imread('./imgs/redcar.jpg')
-#remover = Back(10)
-#imb = remover.remove_bg(im)
-#img = im[~imb]
-#
-#cl = Cluster()
-#result = cl.clusterize(img)
-#print(result)
-#
-#plt.imshow(im)
-#
-#plt.imshow(imb)
-#
-#sel = Selector()
-#cents = sel.largest(result[0], result[1], result[2])
