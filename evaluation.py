@@ -15,7 +15,7 @@ import os
 
 
 detector = Color()
-path = '/home/computervision/Documentos/color_dataset/'
+path = "../datasets/color_ED_eval/"
 
 results = []
 for name in os.listdir(path):
@@ -24,9 +24,9 @@ for name in os.listdir(path):
         img = resize(img, (300, 300))
         detected_color = detector.color(img)
         true_color = name
-        line = [true_color, detected_color, str(path + name + "/" + item)]
+        line = [true_color, detected_color]
         results.append(line)
-        
+
 with open('results_resized.txt', 'w') as f:
     for item in results:
         f.write("%s\n" % item)
