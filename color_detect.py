@@ -20,7 +20,7 @@ class ColorDetector():
                 'orange': [193, 113, 44],
                 'green': [43, 102, 70],
                 'gray': [80, 80, 80],
-                'crimson': [76, 16, 18],
+                'maroon': [76, 16, 18],
                 'blue': [2, 57, 157],
                 'black': [0, 0, 0]
                 }

@@ -15,7 +15,7 @@ import os
 
 
 detector = Color()
-path = "../datasets/color_ED_eval/"
+path = "../color_dataset/"
 
 results = []
 for name in os.listdir(path):
