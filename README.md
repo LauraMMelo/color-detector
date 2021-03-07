@@ -6,28 +6,5 @@ This is a python script that detects the predominant color of an object in an im
 
 
 
-## Pipeline
-```mermaid
-graph LR
-
-A[Input image] .-> C((Mask))
-A -- Remove BG --> B[mask]
-B --> C{Color Pixels}
-C -- KMeans + Distortion --> D[Centroids]
-
-E[Centroids] -- Largest --> F[Predominant pixels]
-F --  L2 Norm on RGBs --> G{Nearest color}
-
-
-```
-
-
-## Files
-
-
-
-## Results
-
-
 
 
